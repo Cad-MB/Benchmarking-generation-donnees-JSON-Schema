@@ -6,10 +6,10 @@ l'espoir que l'instance obtenue soit valide et peuvent même avoir recours à un
 externe dans l'optique de réparer les instances qui seraient non conformes. Et cela en
 ayant recours à la fois à de la rétro-ingénierie et à l'analyse expérimentale. Cette analyse
 portera, principalement, sur trois librairies open-source déjà identifiée et choisies pour leur
-prise en compte de la quasi-totalité des opérateurs du langage de schéma [1,2,3] mais pourra
+prise en compte de la quasi-totalité des opérateurs du langage de schéma mais pourra
 s’étendre à d'autres librairies open-source qu'on jugera pertinentes. Le projet s'inscrit dans le
 cadre d'un projet en cours ayant déjà permis de développer une approche correcte et complete
-mais qui peut s'avérer couteuse [5, 6] dans certains cas.
+mais qui peut s'avérer couteuse dans certains cas.
 
 • Tâches à réaliser
 - Etude de l'état de l'art pour compréhende JSON SCHEMA et la génération d'instances à partir d'un schéma
