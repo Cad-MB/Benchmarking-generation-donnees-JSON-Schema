@@ -1,5 +1,5 @@
 • Objecifs
-Le but de ce projet est d'étudier les limitations théoriques et pratiques des approches 
+- Le but de ce projet est d'étudier les limitations théoriques et pratiques des approches 
 optimiste qui consiste à
 générer une instance en examinant les fragments des schémas et en les combinant dans
 l'espoir que l'instance obtenue soit valide et peuvent même avoir recours à un validateur
