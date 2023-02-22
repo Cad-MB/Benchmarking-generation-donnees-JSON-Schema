@@ -29,7 +29,7 @@ totalGenerated=0
 
 for schema in $(ls -rS $dataset)
 do
-    for i in {1..20}
+    for i in {1..50}
     do
         pathToSchema=$dataset/$schema
         if [ -f $pathToSchema ]
