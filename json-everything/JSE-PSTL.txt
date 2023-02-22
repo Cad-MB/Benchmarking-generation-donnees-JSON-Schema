@@ -1,0 +1,65 @@
+Json-Everything : schema failures
+
+{
+    "if": {
+        "maximum": 0
+    },
+    "then": {
+        "minimum": -50
+    },
+    "else": {
+        "multipleOf": 2
+    }
+}
+-> works, creates valid instances for both then & else
+
+{
+    "if": {
+        "maximum": 0
+    },
+    "then": {
+        "minimum": 50
+    },
+    "else": {
+        "multipleOf": 2
+    }
+}
+
+-> fails at random: most of the time creates large numbers (if condition is false) that do not validate against else, or validate if condition (which makes it impossible to satisfty then)
+
+{
+    "allOf": [
+        {
+            "properties": {
+                "bar": {"type": "integer"}
+            },
+            "required": ["bar"]
+        },
+        {
+            "properties": {
+                "foo": {"type": "string"}
+            },
+            "required": ["foo"]
+        }
+    ]
+}
+
+-> fails: creates schemas that often do not validate against either property
+
+
+{
+    "if": false,
+    "then": { "const": "then" },
+    "else": { "const": "else" }
+}
+
+-> sometimes fails????: will more often than not generate "then"
+
+{
+    "patternProperties": {
+        "f.*o": {"type": "integer"}
+    },
+    "required":["foo"]
+}
+
+-> fails: is incapable of satisfying a required patternProperty
