@@ -62,4 +62,5 @@ Json-Everything : schema failures
     "required":["foo"]
 }
 
+
 -> fails: is incapable of satisfying a required patternProperty
