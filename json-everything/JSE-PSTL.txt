@@ -64,3 +64,9 @@ Json-Everything : schema failures
 
 
 -> fails: is incapable of satisfying a required patternProperty
+
+
+-> Results on test suites
+-containment:   384/434 errors    (88.5% failure)
+-handwritten:   162/187 errors    (86.6% failure)
+-github:        1110/5045 errors  (22.0% failure)
