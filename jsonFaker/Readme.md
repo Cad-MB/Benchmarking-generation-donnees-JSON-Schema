@@ -15,6 +15,8 @@ Exécution du script (on utilise le client pour exécuter)
 * Donc si on met true on doit mettre un autre argument qui est la valeur du timeout, par défaut c'est en secondes
 * Même principe que pour json-everything, ça crée un dossier dans lequel y a les instances et un fichier csv
 
-
+cd /mnt/c/Users/Surface/Documents/GitHub/Benchmarking-de-solutions-optimistes-pour-generation-de-donnees-test-partir-de-JSON-Schema/jsonFaker/
 
 bash ./csvJsonJSF.sh /mnt/c/Users/Surface/Documents/GitHub/Benchmarking-de-solutions-optimistes-pour-generation-de-donnees-test-partir-de-JSON-Schema/jsonFaker/schemas
+
+bash ./analysis.sh /mnt/c/Users/Surface/Documents/GitHub/Benchmarking-de-solutions-optimistes-pour-generation-de-donnees-test-partir-de-JSON-Schema/jsonFaker/schemas/JSFResults/JSFErrors.csv

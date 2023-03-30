@@ -1,0 +1,7 @@
+error;objectId;taux
+The object has too many properties (maximum 0);sp_321_Normalized,sp_326_Normalized;28.00%
+The object has too few properties (minimum 2);sp_348_Normalized,sp_347_Normalized;28.00%
+The instance must be of type "string";sp_351_Normalized,sp_307_Normalized,sp_352_Normalized;42.00%
+The object has too many properties (maximum 0);sp_321_Normalized,sp_326_Normalized;28.00%
+The object has too few properties (minimum 2);sp_348_Normalized,sp_347_Normalized;28.00%
+The instance must be of type "string";sp_351_Normalized,sp_307_Normalized,sp_352_Normalized;42.00%

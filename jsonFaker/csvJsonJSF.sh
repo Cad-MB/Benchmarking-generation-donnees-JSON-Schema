@@ -15,72 +15,81 @@ then
 fi    
 
 resultsPath=$dataset/JSFResults
-
 currentDate=$(date +"%d%m%Y_%Hh%Mm%Ss")
 resultsFile=JSFResults.csv
+errorsFile=JSFErrors.csv
 
 # Ajouter la ligne "objectId,inSize,totalTime,generated,validated,error" uniquement si le fichier n'existe pas encore
-if [ ! -f $resultsPath/$resultsFile ]; then
-    echo "objectId;inSize;totalTime;generated;validated;error;Taux" >> $resultsPath/$resultsFile
+if [ ! -f "$resultsPath/$resultsFile" ]; then
+    echo "objectId;inSize;totalTime;generated;validated" >> "$resultsPath/$resultsFile"
+fi
+
+# Ajouter la ligne "objectId,error" uniquement si le fichier n'existe pas encore
+if [ ! -f "$resultsPath/$errorsFile" ]; then
+    echo "objectId;error" >> "$resultsPath/$errorsFile"
 fi
 
 totalValidated=0
 totalGenerated=0
 
-for schema in $(ls -rS $dataset)
+for schema in $(ls -rS "$dataset")
 do
-    for i in {1..50}
-    do
-        pathToSchema=$dataset/$schema
-        if [ -f $pathToSchema ]
+    
+    pathToSchema="$dataset/$schema"
+    if [ -f "$pathToSchema" ]
+    then
+        size=$(wc -c < "$pathToSchema")
+        echo "$(date +"%d%m%Y_%Hh%Mm%Ss") : started processing $schema (size : $size)"
+        
+        touch "$resultsPath/$(basename "$pathToSchema" .json)_witness.json"
+        
+        start=$(date +%s%N | cut -b1-13)
+        
+        if [ "$withTimeout" == "true" ]
         then
-            size=$(wc -c < $pathToSchema)
-            echo $(date +"%d%m%Y_%Hh%Mm%Ss") : started processing $schema "(size : $size)"
+            timeout "$timeout" generate-json "$pathToSchema" "$resultsPath/$(basename "$pathToSchema" .json)_witness.json"
+        else
+            generate-json "$pathToSchema" "$resultsPath/$(basename "$pathToSchema" .json)_witness.json"
+        fi
+        
+
+        sizeWitness=$(wc -c < "$resultsPath/$(basename "$pathToSchema" .json)_witness.json")
+        
+        if [ "$sizeWitness" == "0" ]
+        then
+            generated=False
+            validated=False
+            error="empty file"
+            echo "$(basename "$pathToSchema" .json);\"$error\"" >> "$resultsPath/$errorsFile"
+        else
+            generated=True
             
-            touch $resultsPath/$(basename $pathToSchema .json)"_witness_"$i.json
+            # Call the Python script with the schema and instance paths as arguments, and store the output in a variable
+            output=$(python3 /mnt/c/Users/Surface/Documents/GitHub/Benchmarking-de-solutions-optimistes-pour-generation-de-donnees-test-partir-de-JSON-Schema/jsonFaker/validation.py "$(cat "$pathToSchema")" "$(cat "$resultsPath/$(basename "$pathToSchema" .json)_witness.json")")
+
+            # Extract the valid and errors values from the output JSON
+            valid=$(echo "$output" | awk '{print $1}')
+            errors=$(echo "$output" | awk '{ $1=""; print $0 }')
             
-            start=$(date +%s%N | cut -b1-13)
-            
-            if [ "$withTimeout" == "true" ]
+            if [ "$valid" = "True" ]
             then
-                timeout $timeout generate-json $pathToSchema $resultsPath"/"$(basename $pathToSchema .json)"_witness_"$i.json
+                validated=True
+                error=""
+                ((totalValidated++))
             else
-                generate-json $pathToSchema $resultsPath"/"$(basename $pathToSchema .json)"_witness_"$i.json
-            fi
-            
-            sizeWitness=$(wc -c < $resultsPath"/"$(basename $pathToSchema .json)"_witness_"$i.json)
-            
-            if [ $sizeWitness == "0" ]
-            then
-                generated=False
                 validated=False
-                error="empty file"
-            else
-                generated=True
-                
-                # Appel de la commande validate-json pour valider l'instance générée
-                
-                jsonschema -i $resultsPath"/"$(basename $pathToSchema .json)"_witness_"$i.json $pathToSchema
-                
-                if [ $? -eq 0 ]
-                then
-                    validated=True
-                    error=""
-                    ((totalValidated++))
-                else
-                    validated=False
-                    error=$(jsonschema -i $resultsPath"/"$(basename $pathToSchema .json)"_witness_"$i.json $pathToSchema 2>&1)
-                fi
+                error=$errors
+                echo "$(basename "$pathToSchema" .json);\"$error\"" >> "$resultsPath/$errorsFile"
             fi
-            
-            end=$(date +%s%N | cut -b1-13)
+        fi
+        
+        end=$(date +%s%N | cut -b1-13)
 
-            totalTime=$((end-start))
+        totalTime=$((end-start))
 
-            echo "$(basename $pathToSchema .json);$size;$totalTime;$generated;$validated;\"$error\"" >> $resultsPath/$resultsFile
+                    echo "$(basename $pathToSchema .json);$size;$totalTime;$generated;$validated;" >> $resultsPath/$resultsFile
             ((totalGenerated++))
         fi
-    done 
 done
 
 if [ $totalGenerated -eq 0 ]
