@@ -1,0 +1,8 @@
+objectId;error;detail
+sp_321_Normalized;"/properties/parameters/maxProperties";"  The object has too many properties (maximum 0)"
+sp_326_Normalized;"/properties/parameters/maxProperties";"  The object has too many properties (maximum 0)"
+sp_357_Normalized;"/properties/json/properties/fieldName/enum";"  The instance value must be equal to one of the elements in the defined enumeration"
+sp_351_Normalized;"/properties/parameters/properties/pii/items/properties/json/properties/field/type";"  The instance must be of type "string""
+sp_307_Normalized;"/properties/pii/properties/json/items/properties/fieldMapping/properties/fieldName/enum";"  The instance value must be equal to one of the elements in the defined enumeration"
+sp_348_Normalized;"/properties/parameters/properties/outputs/items/minProperties";"  The object has too few properties (minimum 2)"
+sp_347_Normalized;"/properties/parameters/properties/inputs/items/minProperties";"  The object has too few properties (minimum 2)"
