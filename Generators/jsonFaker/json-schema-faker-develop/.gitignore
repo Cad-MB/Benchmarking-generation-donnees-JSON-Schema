@@ -1,0 +1,33 @@
+.env
+
+# IDEs
+.idea
+.vscode
+cache.json
+
+*~
+*.log
+*.tgz
+*.todo
+.nyc_output
+.DS_Store
+dist
+build
+coverage
+generated
+node_modules
+package-lock.json
+
+### Vim ###
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags

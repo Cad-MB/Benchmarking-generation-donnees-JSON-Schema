@@ -1,0 +1,79 @@
+@keyframes flick {
+  0% { opacity: .5; }
+  50% { opacity: 1; }
+  100% { opacity: .5; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0%) scale(0.9); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0%) scale(0.9); }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.float {
+  animation: float 1.6s infinite;
+}
+
+.smoo-fence--overlay {
+  z-index: 5 !important;
+  .smoo-fence--wrapper {
+    max-width: 540px;
+  }
+}
+
+.loading-overlay {
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  color: @GRAY;
+  transition: opacity .5s;
+
+  &.fade-out {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+.debug {
+  outline: 1px dashed red;
+  * { outline: 1px dashed red; }
+}
+
+.-dis {
+  position: relative;
+
+  &::before, &::after {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  &::before {
+    background-color: rgba(255, 255, 255, .7);
+    animation: flick 1.6s infinite;
+    content: ' ';
+  }
+
+  &::after {
+    background-color: rgba(255, 255, 255, .9);
+    content: 'Loading...';
+    margin: auto;
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: @radius;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+  }
+}

@@ -1,0 +1,77 @@
+.Toolbar {
+  position: relative;
+}
+
+.jsf-about {
+  .ar {
+    .menu {
+      right: 0;
+    }
+  }
+  li {
+    > .menu {
+      display: none;
+      position: absolute;
+      padding: @padding;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .2);
+      background-color: rgba(255, 255, 255, .95);
+    }
+
+    &:hover > .menu {
+      display: block;
+    }
+
+    li ~ li { margin-top: @margin / 2; }
+
+    li:hover::before {
+      color: @BLUE;
+    }
+
+    li::before {
+      top: 4px;
+      left: -5px;
+      position: absolute;
+      transition: all .3s;
+      content: '⟀';
+      font-size: 15px;
+      color: @border-color;
+      transform: rotate(225deg);
+    }
+
+    li {
+      white-space: nowrap;
+      position: relative;
+      padding-left: 10px;
+
+      &.ni {
+        padding-left: 0;
+        &::before { content: ''; }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: @BLUE;
+
+      &:hover {
+        color: @TEAL;
+      }
+    }
+  }
+
+  p, h2, h3, h4 {
+    margin-bottom: @margin;
+  }
+}
+
+.github-ribbon {
+  transform: rotate(40deg);
+  background: @border-color;
+  color: white;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  right: -50px;
+  top: 35px;
+}
