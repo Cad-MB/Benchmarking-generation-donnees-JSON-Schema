@@ -1,0 +1,1 @@
+{"requirements":{"nisi21":[{"rule":"env","ci":true,"platform":"win32"}]},"config":{"output":"silent"}}

@@ -1,0 +1,1 @@
+{"path":"/sessions","method":"POST","request":{"login":"quis do","password":"velit","captcha":"dolore ullamco"},"responses":[{"status":"401"},{"status":"429"},{"status":"201","body":{"captcha_does_not_match":false,"ad0":"occaecat sunt dolore mollit","elit_a":-48478296.657401375,"ina":19968284.114596546}}]}

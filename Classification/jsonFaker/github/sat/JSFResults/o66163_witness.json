@@ -1,0 +1,1 @@
+{"experiment":"ATLAS","use_deposit_as_record":true,"version":"0.0.1","is_indexed":false,"fullname":"","deposit_schema":{"publisher_type":"fromparjq-pub","relative_paths":true,"glob":true,"tryExact":false,"script":"qui"},"name":"fromparjq-pub-schema"}

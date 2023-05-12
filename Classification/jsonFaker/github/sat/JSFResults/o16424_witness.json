@@ -1,0 +1,1 @@
+{"defaults":{"_sampleFormat":"s16p"},"groups":[{"0":{"control":20,"filters":[{"filter":"OnChangeValue","params":{"LimitMaxValue":[]}}],"parameter":"min_prediction_order"},"1":{"control":28,"filters":[{"filter":"OnChangeValue","params":{"LimitMinValue":[]}}],"parameter":"max_prediction_order"}}],"name":"ALAC"}

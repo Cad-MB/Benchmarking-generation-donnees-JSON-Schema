@@ -1,0 +1,1 @@
+{"kdf":"pbkdf2","kdfparams":{"c":95218408,"dklen":31345251,"prf":"hmac-sha256","salt":"0a6652"}}

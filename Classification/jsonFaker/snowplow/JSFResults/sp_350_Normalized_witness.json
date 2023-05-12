@@ -1,0 +1,1 @@
+{"vendor":"amet","name":"cillum consectetur irure exercitation tempor","enabled":false,"parameters":{"ipFile":{"database":"ip_exclude_current_cidr.txt","uri":"laboris"},"excludeUseragentFile":{"database":"exclude_current.txt","uri":"aute ut deserunt veniam fugiat"},"includeUseragentFile":{"database":"include_current.txt","uri":"non ex adipisicing pariatur in"}}}

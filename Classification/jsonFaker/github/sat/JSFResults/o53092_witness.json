@@ -1,0 +1,1 @@
+{"description":"support consider patternProperties","tests":[{"description":"ensure first schema passes","schema":{"test":null},"valid":true},{"description":"merge both properties definitions","schema":{"big_int":31559952,"normal_int":-97815564,"small_int":-93604985},"valid":true}]}

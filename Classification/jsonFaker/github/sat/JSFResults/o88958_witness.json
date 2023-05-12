@@ -1,0 +1,1 @@
+{"title":"Microsoft.ServerManagement","description":"Microsoft.ServerManagement Resource Types","resourceDefinitions":{"gateway":{"type":"Microsoft.ServerManagement/gateways","apiVersion":"2015-07-01-preview"},"node":{"properties":{"gatewayId":"dolor commodo deserunt","connectionName":"sit ut est"},"type":"Microsoft.ServerManagement/nodes","apiVersion":"2015-07-01-preview"}}}

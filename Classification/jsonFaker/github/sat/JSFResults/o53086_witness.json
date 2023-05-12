@@ -1,0 +1,1 @@
+{"description":"allOf and oneOf nested","schemas":[{"date_of_birth":"consequat nostrud incididunt"}],"tests":[{"description":"should combine recursively","schema":"schemas.0","valid":true}]}

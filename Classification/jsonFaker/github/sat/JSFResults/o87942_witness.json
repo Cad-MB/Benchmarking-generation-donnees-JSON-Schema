@@ -1,0 +1,1 @@
+{"title":"Microsoft.Storage","description":"Microsoft Storage Resource Types","resourceDefinitions":{"storageAccounts":{"type":"Microsoft.Storage/storageAccounts","apiVersion":"2015-05-01-preview","properties":{"accountType":"commodo consequat reprehenderit ad"},"location":"est"}}}

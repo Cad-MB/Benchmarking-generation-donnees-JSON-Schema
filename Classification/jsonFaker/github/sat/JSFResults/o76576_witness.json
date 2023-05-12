@@ -1,0 +1,1 @@
+{"virtualServer":{"backend":{"serviceName":"deserunt enim aliqua","servicePort":64760},"frontend":{"partition":"consectetur","virtualAddress":{"bindAddr":"95.189.153.251"},"balance":"fastest-app-response","mode":"tcp","sslProfile":{"f5ProfileName":"mollit"}}}}

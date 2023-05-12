@@ -1,0 +1,1 @@
+{"description":"Creates unnecessary fields that not described in schema but exists in required section","tests":[{"description":"should take missing props from required ones","schema":{"emails":[{"address":"ut ipsum eu","typeCode":"in consequat amet aute","isPrimary":false}],"name":"sed commodo quis","birthDate":"dolor","addresses":false},"count":4,"valid":true}]}

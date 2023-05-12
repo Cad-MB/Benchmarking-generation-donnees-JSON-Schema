@@ -1,0 +1,1 @@
+{"description":"regression for oneOf mixins","tests":[{"description":"should pick just one property","schema":{"timep":true},"repeat":100,"valid":true}]}

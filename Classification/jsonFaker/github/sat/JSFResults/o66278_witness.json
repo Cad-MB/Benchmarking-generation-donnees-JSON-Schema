@@ -1,0 +1,1 @@
+{"description":"allOf does not work if array item contains oneOf property","tests":[{"description":"should combine sub-schemas on merging allOf","schema":{"b":false,"a":"deserunt dolor consequat reprehenderit"},"valid":true}]}

@@ -1,0 +1,1 @@
+{"bitmap":{"resource_type":"user","type":"cubemap","id":"ut"},"type":"bitmap","texture_parameters":{"mag_filter_type":"GL_NEAREST_MIPMAP_LINEAR","wrap_s_type":"GL_CLAMP_TO_EDGE","min_filter_type":"GL_LINEAR","anisotropic_value":2,"wrap_t_type":"GL_MIRRORED_REPEAT"}}

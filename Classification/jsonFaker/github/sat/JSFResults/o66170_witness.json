@@ -1,0 +1,1 @@
+{"experiment":"ATLAS","use_deposit_as_record":true,"version":"0.0.1","is_indexed":false,"fullname":"","deposit_schema":{"dependency_type":"jsonpath_ready","expressions":[]},"deposit_options":[{"key":"workflows[].workflow.stages[].dependencies.expressions"}],"name":"jsonpathready-schema"}

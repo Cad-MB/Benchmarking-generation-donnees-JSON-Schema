@@ -1,0 +1,1 @@
+{"definitions":{"PostalAddress":{"type":"object","properties":{"street":{"type":"string"},"locality":{"type":"string"},"region":{"type":"string"},"postalCode":{"type":"string"},"postOfficeBox":{"type":"string"},"country":{"type":"string"}}}}}

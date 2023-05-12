@@ -1,0 +1,1 @@
+{"title":"Microsoft.ManagementPartner","description":"Microsoft ManagementPartner Resource Types","resourceDefinitions":{},"tenant_resourceDefinitions":{"partners":{"apiVersion":"2018-02-01","name":"aute","type":"Microsoft.ManagementPartner/partners"}},"definitions":{}}

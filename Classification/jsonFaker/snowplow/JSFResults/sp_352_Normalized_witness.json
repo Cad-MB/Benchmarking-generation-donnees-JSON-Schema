@@ -1,0 +1,1 @@
+{"vendor":"esse aliquip laboris deserunt id","name":"est in","enabled":false,"emitEvent":true,"parameters":{"pii":[{"pojo":{"field":"se_label"}},{"pojo":{"field":"tr_orderid"}}],"strategy":{"pseudonymize":{"hashFunction":"SHA-384","salt":"consectetur incididunt laborum sunt"}}}}

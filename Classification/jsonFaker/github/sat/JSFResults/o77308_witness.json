@@ -1,0 +1,1 @@
+{"$schema":"http://json-schema.org/draft-04/schema#","description":"Some definitions that are used by several descriptors.","memory_units":"B","bandwidth_units":"Mbps","images_formats":"ova","interfaces":"interface"}

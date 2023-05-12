@@ -1,0 +1,1 @@
+{"title":"Definitions","description":"Schema for common types","definitions":{"color":{"$id":"#color","type":"string","enum":["red","yellow","green","blue"]},"point":{"$id":"#point","type":"object","properties":{"x":{"type":"number"},"y":{"type":"number"}},"required":["x","y"]}}}

@@ -1,0 +1,1 @@
+{"title":"Microsoft.WorkloadMonitor","description":"Microsoft WorkloadMonitor Resource Types","resourceDefinitions":{},"extension_resourceDefinitions":{"notificationSettings":{"apiVersion":"2018-08-31-preview","name":"default","type":"Microsoft.WorkloadMonitor/notificationSettings"}},"definitions":{}}

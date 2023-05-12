@@ -1,0 +1,6 @@
+error,taux,objectIds
+dependencies,4.35%,wp_37_Normalized
+additionalProperties,52.17%,"wp_94_Normalized, wp_96_Normalized, wp_53_Normalized, wp_83_Normalized, wp_8_Normalized, wp_4_Normalized, wp_1_Normalized, wp_9_Normalized, wp_0_Normalized, wp_7_Normalized, wp_3_Normalized, wp_35_Normalized"
+enum,13.04%,"wp_78_Normalized, wp_5_Normalized, wp_27_Normalized"
+type,17.39%,"wp_105_Normalized, wp_15_Normalized, wp_98_Normalized, wp_123_Normalized"
+required,13.04%,"wp_6_Normalized, wp_124_Normalized, wp_17_Normalized"

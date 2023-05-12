@@ -1,0 +1,6 @@
+objectId,nbErrors,errorsTypes,errorsMessages
+kb_783_Normalized,1,type,$: number a été trouvé     mais object est attendu
+kb_782_Normalized,1,type,$: string a été trouvé     mais object est attendu
+kb_469_Normalized,1,type,$: string a été trouvé     mais object est attendu
+kb_470_Normalized,1,type,$: string a été trouvé     mais object est attendu
+kb_6_Normalized,1,oneOf,$: devrait être valide pour un et un seul des schémas     mais plus dun sont valides : {1}

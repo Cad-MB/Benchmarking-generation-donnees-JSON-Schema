@@ -1,0 +1,1 @@
+{"definitions":{"US_zipCode":{"type":"string","pattern":"^[0-9]{5}(-[0-9]{4})?$"}}}

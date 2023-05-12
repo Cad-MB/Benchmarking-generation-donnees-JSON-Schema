@@ -1,0 +1,1 @@
+{"api":{"DELETE        /|)Uf":{"response":{"title":"接口的输出数据, 可以是任意的 JSON 数据类型(number/boolean/string/object/array/null), 但推荐返回固定结构的 object 类型的数据","description":"接口的输出数据, 可以是任意的 JSON 数据类型(number/boolean/string/object/array/null), 但推荐返回固定结构的 object 类型的数据"},"disabled":true}}}

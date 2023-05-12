@@ -1,0 +1,1 @@
+[{"type":"constructor","inputs":[{"name":"sORKN8","type":"bool"},{"name":"","type":"bool[194008751]"},{"name":"XF$","type":"function[0445]"}],"payable":false},{"type":"fallback"},{"name":"UoY","inputs":[],"constant":false},{},{"type":"event","name":{},"inputs":[{"indexed":true},{"indexed":true},{"indexed":true},{"indexed":false},{"indexed":false}],"anonymous":true}]

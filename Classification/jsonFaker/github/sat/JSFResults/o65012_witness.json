@@ -1,0 +1,1 @@
+{"filter":{"should":[{"field1":"sunt aliquip pariatur sed","constant":45780157.00425312,"comparison_operator":"lt","filter_type":"in"},{"field1":"aliqua irure commodo culpa enim","constant":"ea aliqua","comparison_operator":"eq","filter_type":"compare"}]}}

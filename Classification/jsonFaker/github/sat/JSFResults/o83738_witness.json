@@ -1,0 +1,1 @@
+{"title":"Canada provincial postal abbreviations","description":"Postal abbreviations for provinces and territories of Canada","definitions":{"CAN_province":{"type":"string","enum":["AB","BC","MB","NB","NL","NS","NT","NU","ON","PE","QC","SK","YT"]},"CAN_postalCode":{"type":"string","pattern":"^[A-Z][0-9][A-Z]( )?[0-9][A-Z][0-9]$"}}}
