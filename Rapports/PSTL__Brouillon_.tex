@@ -1,0 +1,140 @@
+\documentclass{article}
+
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{LightGray}{gray}{0.9}
+\usepackage{minted}
+\usemintedstyle{perldoc}
+
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[indent=15pt]{parskip}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings, xcolor}
+%%\DeclareUnicodeCharacter{2212}{-}
+\lstset{
+tabsize = 4, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\begin{document}
+\begin{titlepage}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=5cm]{uninsubria-logo.png}
+\end{figure}
+
+\begin{center}
+    \Large{\textbf{Sorbonne Université}}
+    \vspace{3mm}
+    \\ \normalsize{Faculté des Sciences et Ingénierie}
+    \vspace{6mm}
+    \\ \normalsize{Master Informatique}
+    \\ \normalsize{Parcours Science et Technologie du Logiciel}
+    \\  \normalsize{(STL)}
+    \vspace{13mm}
+\end{center}
+
+\vspace{8mm}
+\begin{center}
+    \LARGE{\textbf{Benchmarking de solutions optimistes pour génération de données test à partir de JSON Schema}}
+\end{center}
+\vspace{30mm}
+
+\begin{minipage}[t]{0.47\textwidth}
+	{\normalsize{\textbf{Auteurs}}{\normalsize\vspace{1mm}
+    \\ \normalsize{Abdelkader Boumessaoud\\ Zaky Abdellaoui}}} \\
+    
+    {\normalsize{\textbf{Encadrants}}{\normalsize\vspace{1mm}
+    \\ \normalsize{Mohamed-Amine Baazizi\\ Lyes Attouche}}}
+\end{minipage}
+\end{titlepage}
+\newcommand{\json}[0]{JSON Schema}
+\newcommand{\jsonsch}[0]{JSON Schema}
+\newcommand{\jschon}[0]{\texttt{jschon}}
+\newcommand{\jg}[0]{\texttt{json-data-generator}}
+\newcommand{\jsf}[0]{\texttt{json-schema-faker}}
+\newcommand{\je}[0]{\texttt{json-everything}}
+\newpage
+\tableofcontents
+\newpage
+\newcommand{\todo}[1]{\textcolor{blue}{\emph{[#1]}}}
+
+\input{body}
+
+\newpage
+
+\begin{thebibliography}{8}
+
+\bibitem{js}\json \hspace{1mm} https://json-schema.org
+\bibitem{spec}\json \hspace{1mm} Documentation https://json-schema.org/understanding-json-schema/
+\bibitem{jsf}\jsf \hspace{1mm} Générateur (Avril 2023) https://github.com/json-schema-faker/json-schema-faker
+\bibitem{je}\je \hspace{1mm} Générateur (Avril 2023) https://github.com/gregsdennis/json-everything
+\bibitem{jg}\jg \hspace{1mm} Générateur https://github.com/jimblackler/jsongenerator
+\bibitem{dg}Lyes Attouche, Mohamed-Amine Baazizi, Dario Colazzo, Giorgio Ghelli, Carlo Sartiani, Stefanie Scherzinger \emph{Witness Generation for JSON Schema} https://arxiv.org/pdf/2202.12849.pdf
+\bibitem{jschon}\jschon \hspace{1mm} Validateur (Avril 2023) https://jschon.dev/
+\bibitem{ts}\json \hspace{1mm} Test Suite (Février 2023) https://github.com/json-schema-org/JSON-Schema-Test-Suite
+\bibitem{ds1} Snowplow Dataset (Fevrier 2023) https://github.com/snowplow/iglu-central
+\bibitem{ds2} WashingtonPost Dataset (Fevrier 2023) https://github.com/washingtonpost/ans-schema
+\bibitem{ds3} Kubernetes Dataset (Fevrier 2023) https://github.com/instrumenta/kubernetes-json-schema
+\bibitem{ds4} GitHub Dataset (Fevrier 2023) https://github.com/sdbs-uni-p/json-schema-corpus
+\bibitem{}Lyes Attouche, Mohamed Amine Baazizi, Dario Colazzo, Francesco Falleni, Giorgio Ghelli, Cristiano Landi, Carlo Sartiani, Stefanie Scherzinger,  \emph{A Tool for JSON Schema Witness Generation}, EDBT 2021: 694-697
+\bibitem{}Mohamed Amine Baazizi, Dario Colazzo, Giorgio Ghelli, Carlo Sartiani, Stefanie Scherzinger, \emph{Not Elimination and Witness Generation for JSON Schema}, CoRR abs/2104.14828 (2021)
+\bibitem{}Pierre Bourhis, Juan L. Reutter, Fernando Suárez, Domagoj Vrgoc,  \emph{JSON: Data model, Query languages and Schema specification}, PODS’1
+\bibitem{}A. Antonio, "Exploitez des données au format JSON", OpenClassrooms. 
+https://openclassrooms.com/fr/courses/7697016-creez-des-pages-web-dynamiques-avec-javascript/7911021-
+exploitez-des-donnees-au-format-json.
+
+\end{thebibliography}
+
+\end{document}
