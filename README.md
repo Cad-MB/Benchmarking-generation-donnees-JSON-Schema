@@ -25,3 +25,5 @@ mais qui peut s'avérer couteuse dans certains cas.
 - Validateur (à gauche on met le schéma, et à droite l'instance) : https://www.jsonschemavalidator.net/
 - Test-Suite : https://github.com/json-schema-org/JSON-Schema-Test-Suite/tree/main/tests/draft7
 - Générateurs (json-everything et json-schema-faker) : https://nuage.lip6.fr/s/WLWpAEEAfQxCnM2https://nuage.lip6.fr/s/WLWpAEEAfQxCnM2
+
+Noté : 15 / 20
